@@ -1,0 +1,307 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+
+% Link TOC
+\usepackage[hidelinks, hypertexnames=false]{hyperref}
+
+% Margins, etc.
+\usepackage[letterpaper, margin=1in]{geometry}
+
+% Skip paragraphs
+\usepackage{parskip}
+
+% Image Support
+\usepackage{graphicx}
+\graphicspath{ {./}{./images/} }
+
+% SVG support
+% \usepackage{svg}
+% \svgpath{ {./} }
+
+% Layout of itemize and enumerate
+\usepackage{enumitem}
+%\setlist[enumerate]{noitemsep}
+
+% Caption Settings
+% Used to center captions under image in this document
+\usepackage{caption}
+
+% Section Numbering
+\setcounter{secnumdepth}{0}
+
+% No hyphenation
+\usepackage[none]{hyphenat}
+
+% Overwrite subsection to continue on same line
+\usepackage{titlesec}
+\titleformat{\subsection}[runin]{\normalfont\bfseries}{}{0pt}{}{}
+
+% Strikethrough
+\usepackage{ulem}
+
+% Colors
+\usepackage{xcolor}
+
+% Watermarks
+% \usepackage{draftwatermark}
+% \SetWatermarkText{DRAFT}
+% \SetWatermarkScale{6}
+
+% Special commands to make Articles, Sections
+\newcounter{barticlecounter}
+\newcounter{bsectioncounter}[barticlecounter]
+
+% Create new article
+\newcommand{\barticle}[1]{
+    \stepcounter{barticlecounter}
+    \section{Article \Roman{barticlecounter}: #1}
+}
+
+% Create new section
+\newcommand{\bsection}[1]{
+    \stepcounter{bsectioncounter}
+    \phantomsection % https://tex.stackexchange.com/questions/364010/hyperref-and-titlesec-conflict-and-warning
+    \subsection*{Section \arabic{bsectioncounter}} #1
+    \addcontentsline{toc}{subsection}{Section \arabic{bsectioncounter}: #1}
+}
+
+% Editing: strikethrough to remove
+\newcommand{\bremove}[1]{
+    {\color{red}\sout{#1}}
+}
+
+% Editing: highlight green to add
+\definecolor{darkgreen}{RGB}{73, 158, 83}
+\newcommand{\badd}[1]{
+    {\color{darkgreen}#1}
+}
+
+% Start Bylaws
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\null
+\vfill
+
+{\Huge The Bylaws of the
+
+Mines Maker Society}
+
+\vspace{2cm}
+
+\includegraphics[width=0.4\linewidth]{MMS_Logo.png}
+
+\vspace{2cm}
+
+Last Revised: January 10, 2024
+
+Last Generated: \today
+
+\vfill
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\clearpage
+\raggedright
+
+\barticle{Name of the Organization}
+\bsection{The name of the Organization will be the Maker Society}
+
+\begin{enumerate}[label=\Alph*.]
+    \item The Organization may also be referred to as the Mines Maker Society, abbreviated MMS.
+\end{enumerate}
+
+
+
+\barticle{Purpose}
+\bsection{General Purpose}
+
+\begin{enumerate}[label=\Alph*.]
+    \item The Mines Maker Society will create a strong Making community that focuses on inspiring creativity, making Making accessible, advocating for collaboration between members and other groups at Mines, creating a space where all members of the Mines community feel at home and welcome, and most importantly, having fun! We will achieve this by hosting events and challenges for club members and the wider Mines community, embracing individuals’ unique talents and creativity, embodying a philosophy of Making for its inherent joy, encouraging members to use all making capabilities across campus, and bringing novel making capabilities to the Mines community.
+\end{enumerate}
+
+
+\bsection{Goals for the Organization}
+
+The goals of the Mines Maker Society shall be:
+
+\begin{enumerate}[label=\Alph*.]
+    \item To provide a platform organization for independent tinkerers, project-based student organizations, research initiatives, and campus workshop staff to collaborate.
+    \item To collaborate with student organizations and campus to organize and execute training workshops.
+    \item To engage with the student body through marketing (e.g. a website and/or portal) to provide a connection to the Maker Society, such as providing information on Making events, opportunities, equipment and resources, and idea forums.
+    \item To interface with administration such as the Mines Foundation and SAIL in association with Mines\includegraphics[height=8pt]{funny_at.png}150 goals and the Signature Student Experience.
+    \item Maintain independent funding for student projects and the Maker Society’s improvement projects. 
+
+\end{enumerate}
+
+
+
+\barticle{Membership}
+\bsection{Eligibility}
+
+\begin{enumerate}[label=\Alph*.]
+    \item Membership is strictly limited to students of Mines according to budget policies laid forth at the inception of the student activities fee. Student money is mandated to be spent on students and students alone, with the exception of the faculty advisor and instructors, teachers and speakers the club utilizes. However, membership can be granted to non-students under specific rules.  These rules may be set forth in Maker Society Policy.
+    
+    \item Students found not fully exemplifying the Mines Student Code of Conduct, especially that of Article V, may be removed from the Maker Society after review of the Executive Board  (includes the President, Vice President, and Treasurer) from a majority vote of these parties for dismissal. Membership must be revoked by SAIL/Mines in accordance with the Colorado School of Mines Code of Conduct, Student Organizations Handbook, or any other pertinent school policies.  (As outlined in the \href{https://www.mines.edu/policy-library/mines-student-code-of-conduct/}{Student Code of Conduct}).
+\end{enumerate}
+
+
+
+\barticle{Officers}
+\bsection{Executive Board Members and Duties}
+
+\begin{enumerate}[label=\Alph*.]
+    \item The Executive Board shall consist of the President, Vice President, and Treasurer, and other Officers as they shall determine.
+    \begin{enumerate}[label=\arabic*)]
+        \item The Executive Board shall oversee proceedings not already defined in these Bylaws or Maker Society Policy. 
+    \end{enumerate}
+    
+    \item President
+    \begin{enumerate}[label=\arabic*)]
+        \item The President shall ensure that club proceedings are in line with the club’s purpose and goals.
+        \item The President shall preside over club meetings and officers’ meetings.
+        \item The President shall perform any other duties customarily pertaining to the Office, as well as any other duties assigned by the organization members or Leadership Board.
+        \item The President shall delegate work to other Leadership Board positions as needed to allow them to focus on their presidential duties.
+    \end{enumerate}
+    
+    \item Vice-President
+    \begin{enumerate}[label=\arabic*)]
+        \item The Vice-President shall assume the duties of the President if the President is absent or unavailable.
+        \item The Vice-President shall ensure that all official paperwork and business with Colorado School of Mines and the Board of Student Organizations (BSO) is conducted in a timely fashion. This includes (but is not limited to): BSO meetings and forms, etc.
+    \end{enumerate}
+
+    \item Treasurer
+    \begin{enumerate}[label=\arabic*)]
+        \item The Treasurer shall maintain an accurate ledger of the organization’s budget and expenditures.
+        \item The Treasurer shall collaborate with the Leadership Board to ensure all expenditures are appropriate and in line with the club’s purpose and goals.
+        \item The Treasurer shall report to the treasurer of BSO and disburse the budget of the current fiscal year under BSO financial guidelines.
+        \item The Treasurer shall prepare a budget preceding the end of the spring semester for the submittal to the BSO financial committee. 
+    \end{enumerate}
+\end{enumerate}
+
+\bsection{Leadership Board Members and Duties}
+
+\begin{enumerate}[label=\Alph*.]
+    \item The Leadership Board shall fulfill all other needs of the club at the time of their service. These positions are ad hoc and may be adjusted at any time to suit club needs.
+    \item The Executive Board shall maintain a list of these positions and update when positions are created or dissolved, or when a member of the Leadership Board changes, or when otherwise necessary.  
+\end{enumerate}
+
+\bsection{Advisors}
+\begin{enumerate}[label=\Alph*.]
+    \item Club Advisor
+    \begin{enumerate}[label=\arabic*)]
+        \item The Executive Board shall decide how the MMS Advisor is selected. 
+        \item The Executive Board may, at their discretion, evaluate the Club Advisor as needed.
+        \item Advisors shall have no voting powers.
+        \item Advisors must fill out the Advisor Agreement and be CSA Trained. They shall also abide by applicable Mines and MMS policies.
+        \item Advisors shall act as primary contact in addition to the Faculty Advisor for the campus community and administration regarding the organization.
+    \end{enumerate}
+    
+    \item Alumni Advisor
+    \begin{enumerate}[label=\arabic*)]
+        \item Alumni Advisors are considered Mines Alumni who are no longer undergraduate students at the Colorado School of Mines and whose primary role is to support the wellbeing of the organization. 
+        \begin{enumerate}[label=\roman*.]
+            \item Graduate students can serve as an Alumni Advisor if they no longer wish to be a student participant in the organization. 
+            \item An Alumni Advisor may apply or be appointed by the organization.
+            \item Alumni Advisors have a one-year term limit with the option for renewal and must live in Colorado. 
+            \item Alumni Advisors have no voting powers. 
+            \item Alumni Advisors must fill out the Advisor Agreement and be CSA Trained. 
+            \item Alumni Advisors shall act as primary contact in addition to the Faculty Advisor for the campus community and administration regarding the organization. 
+            \item Alumni Advisors shall be responsible for publicizing the organization in a productive manner to the school and community. 
+            \item Alumni Advisors shall act as primary contact, aid, and advocate for their organization. 
+            \item Alumni Advisors shall have general oversight of the organizations, and be familiar with university, governing body, and SAIL processes to best aid their organization. 
+            \item Alumni advisors must attend at least one meeting per month and shall regularly check in with leaders to offer necessary support for organization. 
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
+
+
+\bsection{Qualifications}
+\begin{enumerate}[label=\Alph*.]
+    \item All officers shall be members of the organization for the duration of their membership.
+    \item The President of the Organization shall have served on the Executive or Leadership Board in some other capacity for at least one year before they are eligible for Presidency. Exceptions to this may be made by a combined vote of the Executive and Leadership Boards with a 2/3 affirmative vote if the candidate has at least one semester of active leadership duty.  
+    \item No President shall serve consecutive terms. Exceptions may be made to this term limit if, at the time of the Election of a President, they are running for the position unopposed, or, have their term limit waived pursuant to the process outlined in Article IV.4.B, or, have served as President in the previous term for less than one-half (1/2) of the duration of the term as defined by these Bylaws.
+\end{enumerate}
+
+\bsection{Term of Office}
+\begin{enumerate}[label=\Alph*.]
+    \item The President, Vice President, and Treasurer will serve for the term of one year from Jan 1st until December 31st.
+    \item Appointed positions will serve as long as they are needed or until their removal by the board. Appointed positions may also choose to step down and will train/find a new person to do their tasks before stepping down. 
+    \item The Executive Board may perform a yearly review of Leadership Board positions should they deem necessary. This shall coincide with the Election of the Executive Board. 
+\end{enumerate}
+
+
+\bsection{Officer Transitions}
+\begin{enumerate}[label=\Alph*.]
+    \item An officer transition meeting will take place at the end of each fall semester, after elections have occurred.
+    \item Outgoing leadership team members are expected to prepare any relevant materials as well as a timeline of duties to pass along to the incoming officer. They will also be required to help, if possible, during the next presidency. They are also expected to allow the new Executive Board to access private Teams channels as soon as they are voted in. 
+\end{enumerate}
+
+\bsection{Removal from Office}
+\begin{enumerate}[label=\Alph*.]
+    \item An officer may be removed from their office if:
+    \begin{enumerate}[label=\roman*.]
+        \item After one month, the officer has consistently forgotten or shirked their duties
+        \item The officer is guilty of performing actions that may harm or endanger the club, its members, or the Colorado School of Mines, whether physically, financially, or otherwise.
+        \item It is determined that the appointed position is no longer needed.
+        \item A majority vote of the Executive and Leadership Board is required to remove the President, Vice President, or Treasurer from office.
+    \item SAIL Staff must be involved in the removal process of anyone from an officer or membership removal.
+    \end{enumerate}
+
+    \item A vote may be called by any member of the Leadership Board, and, under consent of the Executive Board, the Officer may be removed with a two-thirds (2/3) vote provided a Quorum of three-fourths (3/4) of the Executive and Leadership Boards are present, and a roll call must be called.
+\end{enumerate}
+
+\barticle{Committees}
+\bsection{Discretionary Committees}
+\begin{enumerate}[label=\Alph*.]
+    \item The Maker Society reserves the right to create and dissolve committees as it sees fit.
+    \item Committees shall be chaired by a Maker Society Member selected by the Executive Board 
+\end{enumerate}
+
+
+
+\barticle{Administration}
+\bsection{Policies and Procedures}
+\begin{enumerate}[label=\Alph*.]
+    \item The Maker Society, operating as an arm of the Blaster Design Factory, shall, in conjunction with its Faculty Advisor and its overseeing Department, administer policy to govern the Blaster Factory and its associated holdings.
+    \item The Executive Board, under the Advice and/or Consent of the Leadership Board, may create policies and procedures that govern the operations, relationships, and other business of the Blaster Design Factory and its associated holdings.
+\end{enumerate}
+
+
+
+\barticle{Meetings}
+\bsection{Meetings}
+\begin{enumerate}[label=\Alph*.]
+    \item Club meetings will be held at least monthly. The date and time of the meeting will be decided upon by the Leadership Board. The time of the meeting shall be advertised to the Mines Community, and are open to the public.
+    \item The Leadership or Executive Board may call other meetings.
+    \item Outreach events, training events, and guest speakers will be scheduled by the Leadership Board and the relevant third party. An announcement post will be made no less than five days before the event.
+    \item All Official Proceedings of the Mines Maker Society require a majority of the President, Vice President, and Treasurer to constitute a Quorum.
+    \item For matters affecting the Leadership Board, a Quorum of one-half (1/2) of the Leadership Board is required, in addition to the requirements in Article VII.1.D. A quorum will be assumed to be present unless a roll call vote is called for by an Officer. 
+\end{enumerate}
+
+\barticle{Non-Discrimination}
+\bsection{Non-Discrimination Statement}
+
+The Maker Society (officers, members, and advisors), in conjunction and congruence with the
+Colorado School of Mines (Mines), confirms its support of the prohibition of discrimination and
+harassment on the basis of age, ancestry, creed, marital status, race, color, ethnicity, religion, national
+origin, sex (including gender based stalking, intimate partner violence, non-consensual sexual contact
+and/or penetration, sexual exploitation and sexual harassment), pregnant and parenting status, gender,
+gender identity and/or expression, disability, sexual orientation, genetic information, veteran status, or
+military service in all of its programs and activities. The Maker Society shall observe and abide by all
+applicable.
+
+\barticle{Amendments}
+\bsection{Ratification and Amendment}
+
+These bylaws are subject to initial approval by Mines, after submittal to and subject to revision by the Student Affairs Committee. Following the initial approval by Mines, these bylaws may be revised at any time by a vote of at least two-thirds (2/3) of the current Executive and Leadership Board, with regard to state law, the student code of conduct, the bylaws of the Colorado School of Mines, the Mines Budget Committee operating rules, and the Bylaws of the Board of Student Organizations.
+
+
+
+\end{document}
+
